@@ -1,21 +1,23 @@
 import React from 'react';
+import H2Styled from '../styles/H2Style';
+import H3Styled from '../styles/H3Style';
+import PStyled from '../styles/PStyled';
 
-const Experience =()=>(
+const Experience = props => (
     <div className="Experience">
-        <div className="Experience-container">
-            <div className="Experience-item">
-                <h3>Sistemas de Información Satelital Actualidad (2019)</h3>
-                <p>Area de soporte técnico y atención a clientes, apoyo con reportes en área administrativa y contacto 
-                    en ingles con proveedores Europeos. Tiempo completo.
-                </p>
-            </div>
-            <div className="Experience-item">
-                <h3>Innovación Tecnologica en Logistica (2015) </h3>
-                <p>Area de soporte técnico y atención a clientes. Medio tiempo.
-                </p>
-            </div>
-        </div>
+        <H2Styled name="Experience" />
+            {props.data.map((exp, index) => (
+                    <div className="Experience-item" key={`Experience -${index}`}>
+                        <H3Styled>{exp.jobTitle} { exp.company}
+                        <span>{exp.startDate} - {exp.endDate}</span>
+                        </H3Styled>
+                        <PStyled>exp.jobDescription</PStyled>
+                
+                    </div>
+                ))
+            }
+        
     </div>
-)
+);
 
 export default Experience;

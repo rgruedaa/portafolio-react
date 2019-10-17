@@ -1,14 +1,14 @@
 import {useState, useEffect} from 'react';
 //importamos funciones hooks desde la librería de react
 
-const api='https://us-central1-cv-api-nueva.cloudfunctions.net/api'
+
 
 //funcion que actualiza nuestro estado, mydata es el estado y setData es la funcion que actualiza nuestro estado
-const useGetData=()=>{
+const useGetData=(url)=>{
     const [mydata,setData] = useState([]);
 
     useEffect(()=> { //se encarga de hacer la petición
-        fetch(api)
+        fetch(url)
         .then(response => response.json())
         .then(data => setData(data))
     }, []);
