@@ -49,7 +49,6 @@ box-shadow: inset 0 2px 9px rgba(255,255, 255, 0.3), inset 0 -2px 6px rgba(0,0,0
 const move =keyframes`
 0% { background-position: 0 0;}
 100% {background-position: 50px 50px;}
-
 `;
 
 const Skills = props => (
