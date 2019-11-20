@@ -16,6 +16,6 @@ const Education = props => (
             ))}
         
     </div>
-)
+);
 
 export default Education;

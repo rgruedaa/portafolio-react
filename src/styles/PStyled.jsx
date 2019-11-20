@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledP = styled.p`
-font-weight:350;
+font-weight: 300;
 margin: 0.5em 0 1.2em 0;
-color: #2012121;
+color: #757575;
 font-size: 1.2em;
 `;
 
-const PStyled = ({children }) => <StyledP>{children}</StyledP>
+const PStyled = ({content }) => <StyledP>{content}</StyledP>;
 
 export default PStyled;

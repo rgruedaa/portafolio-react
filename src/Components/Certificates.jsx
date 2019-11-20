@@ -11,12 +11,10 @@ const Certificates = props => (
                         <H3Styled>{cer.name} {cer.institution}
                         <span>{cer.date}</span>
                         </H3Styled>
-                        <PStyled content ={cer.description}></PStyled>
+                        <PStyled content={cer.description}></PStyled>
                     </div>
                 ))
-
             }
-        
     </div>
 );
 
